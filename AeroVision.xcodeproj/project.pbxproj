@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05D2A9B81E80BE9700B479E9 /* SwiftyCam-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D2A9B61E80BE9700B479E9 /* SwiftyCam-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		30A22D931F9D866000D77322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D831F9D866000D77322 /* AppDelegate.swift */; };
+		30A22D941F9D866000D77322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A22D841F9D866000D77322 /* Assets.xcassets */; };
+		30A22D951F9D866000D77322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A22D851F9D866000D77322 /* LaunchScreen.storyboard */; };
+		30A22D961F9D866000D77322 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A22D871F9D866000D77322 /* Main.storyboard */; };
+		30A22D981F9D866000D77322 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D8A1F9D866000D77322 /* PhotoViewController.swift */; };
+		30A22D991F9D866000D77322 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D8C1F9D866000D77322 /* PreviewView.swift */; };
+		30A22D9A1F9D866000D77322 /* SwiftyCamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D8D1F9D866000D77322 /* SwiftyCamButton.swift */; };
+		30A22D9B1F9D866100D77322 /* SwiftyCamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D8E1F9D866000D77322 /* SwiftyCamViewController.swift */; };
+		30A22D9C1F9D866100D77322 /* SwiftyCamViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D8F1F9D866000D77322 /* SwiftyCamViewControllerDelegate.swift */; };
+		30A22D9D1F9D866100D77322 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D901F9D866000D77322 /* SwiftyRecordButton.swift */; };
+		30A22D9E1F9D866100D77322 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D911F9D866000D77322 /* VideoViewController.swift */; };
+		30A22D9F1F9D866100D77322 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D921F9D866000D77322 /* ViewController.swift */; };
+		30A22DA31F9D869100D77322 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A22DA21F9D869100D77322 /* Info.plist */; };
+		C6F12C62DB76DBE391E50A37 /* Pods_AeroVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B429F94AA12C79532479E0 /* Pods_AeroVision.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		05D2A9B41E80BE9700B479E9 /* SwiftyCam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyCam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05D2A9B61E80BE9700B479E9 /* SwiftyCam-iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftyCam-iOS.h"; sourceTree = "<group>"; };
+		05D2A9B71E80BE9700B479E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B7CE92C8DD3C7AEE98895A /* Pods-AeroVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroVision/Pods-AeroVision.release.xcconfig"; sourceTree = "<group>"; };
+		1675A9721E00A68300B80903 /* AeroVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28B429F94AA12C79532479E0 /* Pods_AeroVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30A22D831F9D866000D77322 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30A22D841F9D866000D77322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30A22D861F9D866000D77322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30A22D881F9D866000D77322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30A22D8A1F9D866000D77322 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		30A22D8C1F9D866000D77322 /* PreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		30A22D8D1F9D866000D77322 /* SwiftyCamButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCamButton.swift; sourceTree = "<group>"; };
+		30A22D8E1F9D866000D77322 /* SwiftyCamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCamViewController.swift; sourceTree = "<group>"; };
+		30A22D8F1F9D866000D77322 /* SwiftyCamViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyCamViewControllerDelegate.swift; sourceTree = "<group>"; };
+		30A22D901F9D866000D77322 /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		30A22D911F9D866000D77322 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		30A22D921F9D866000D77322 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30A22DA21F9D869100D77322 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5C70859E28FD561A890D0E /* Pods-AeroVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AeroVision/Pods-AeroVision.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05D2A9B01E80BE9700B479E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1675A96F1E00A68300B80903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F12C62DB76DBE391E50A37 /* Pods_AeroVision.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05D2A9B51E80BE9700B479E9 /* SwiftyCam-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				05D2A9B61E80BE9700B479E9 /* SwiftyCam-iOS.h */,
+				05D2A9B71E80BE9700B479E9 /* Info.plist */,
+			);
+			path = "SwiftyCam-iOS";
+			sourceTree = "<group>";
+		};
+		1675A9691E00A68300B80903 = {
+			isa = PBXGroup;
+			children = (
+				30A22D821F9D866000D77322 /* App */,
+				05D2A9B51E80BE9700B479E9 /* SwiftyCam-iOS */,
+				1675A9731E00A68300B80903 /* Products */,
+				B637DFB904385735DE859163 /* Pods */,
+				62AAE4D56F55A63CDE040569 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1675A9731E00A68300B80903 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1675A9721E00A68300B80903 /* AeroVision.app */,
+				05D2A9B41E80BE9700B479E9 /* SwiftyCam.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30A22D821F9D866000D77322 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				30A22D8B1F9D866000D77322 /* Source */,
+				30A22D831F9D866000D77322 /* AppDelegate.swift */,
+				30A22D841F9D866000D77322 /* Assets.xcassets */,
+				30A22D851F9D866000D77322 /* LaunchScreen.storyboard */,
+				30A22D871F9D866000D77322 /* Main.storyboard */,
+				30A22DA21F9D869100D77322 /* Info.plist */,
+				30A22D8A1F9D866000D77322 /* PhotoViewController.swift */,
+				30A22D901F9D866000D77322 /* SwiftyRecordButton.swift */,
+				30A22D911F9D866000D77322 /* VideoViewController.swift */,
+				30A22D921F9D866000D77322 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		30A22D8B1F9D866000D77322 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				30A22D8C1F9D866000D77322 /* PreviewView.swift */,
+				30A22D8D1F9D866000D77322 /* SwiftyCamButton.swift */,
+				30A22D8E1F9D866000D77322 /* SwiftyCamViewController.swift */,
+				30A22D8F1F9D866000D77322 /* SwiftyCamViewControllerDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		62AAE4D56F55A63CDE040569 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28B429F94AA12C79532479E0 /* Pods_AeroVision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B637DFB904385735DE859163 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A5C70859E28FD561A890D0E /* Pods-AeroVision.debug.xcconfig */,
+				06B7CE92C8DD3C7AEE98895A /* Pods-AeroVision.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		05D2A9B11E80BE9700B479E9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D2A9B81E80BE9700B479E9 /* SwiftyCam-iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05D2A9B31E80BE9700B479E9 /* SwiftyCam-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05D2A9B91E80BE9700B479E9 /* Build configuration list for PBXNativeTarget "SwiftyCam-iOS" */;
+			buildPhases = (
+				05D2A9AF1E80BE9700B479E9 /* Sources */,
+				05D2A9B01E80BE9700B479E9 /* Frameworks */,
+				05D2A9B11E80BE9700B479E9 /* Headers */,
+				05D2A9B21E80BE9700B479E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftyCam-iOS";
+			productName = "SwiftyCam-iOS";
+			productReference = 05D2A9B41E80BE9700B479E9 /* SwiftyCam.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1675A9711E00A68300B80903 /* AeroVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1675A9841E00A68300B80903 /* Build configuration list for PBXNativeTarget "AeroVision" */;
+			buildPhases = (
+				375701A353CC40FF5F801B67 /* [CP] Check Pods Manifest.lock */,
+				1675A96E1E00A68300B80903 /* Sources */,
+				1675A96F1E00A68300B80903 /* Frameworks */,
+				1675A9701E00A68300B80903 /* Resources */,
+				5931AB36BDE4EEE729E8DF6B /* [CP] Embed Pods Frameworks */,
+				6EA57F4B5EA3FBC4C7FEF80F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AeroVision;
+			productName = DemoSwiftyCam;
+			productReference = 1675A9721E00A68300B80903 /* AeroVision.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1675A96A1E00A68300B80903 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Cappsule;
+				TargetAttributes = {
+					05D2A9B31E80BE9700B479E9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					1675A9711E00A68300B80903 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 95ZGR52Q89;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1675A96D1E00A68300B80903 /* Build configuration list for PBXProject "AeroVision" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1675A9691E00A68300B80903;
+			productRefGroup = 1675A9731E00A68300B80903 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1675A9711E00A68300B80903 /* AeroVision */,
+				05D2A9B31E80BE9700B479E9 /* SwiftyCam-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05D2A9B21E80BE9700B479E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1675A9701E00A68300B80903 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A22DA31F9D869100D77322 /* Info.plist in Resources */,
+				30A22D941F9D866000D77322 /* Assets.xcassets in Resources */,
+				30A22D961F9D866000D77322 /* Main.storyboard in Resources */,
+				30A22D951F9D866000D77322 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		375701A353CC40FF5F801B67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5931AB36BDE4EEE729E8DF6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AeroVision/Pods-AeroVision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EA57F4B5EA3FBC4C7FEF80F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AeroVision/Pods-AeroVision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05D2A9AF1E80BE9700B479E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1675A96E1E00A68300B80903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A22D9B1F9D866100D77322 /* SwiftyCamViewController.swift in Sources */,
+				30A22D9D1F9D866100D77322 /* SwiftyRecordButton.swift in Sources */,
+				30A22D9C1F9D866100D77322 /* SwiftyCamViewControllerDelegate.swift in Sources */,
+				30A22D9E1F9D866100D77322 /* VideoViewController.swift in Sources */,
+				30A22D991F9D866000D77322 /* PreviewView.swift in Sources */,
+				30A22D9A1F9D866000D77322 /* SwiftyCamButton.swift in Sources */,
+				30A22D9F1F9D866100D77322 /* ViewController.swift in Sources */,
+				30A22D931F9D866000D77322 /* AppDelegate.swift in Sources */,
+				30A22D981F9D866000D77322 /* PhotoViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30A22D851F9D866000D77322 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30A22D861F9D866000D77322 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30A22D871F9D866000D77322 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30A22D881F9D866000D77322 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05D2A9BA1E80BE9700B479E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SwiftyCam-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cappsule.SwiftyCam-iOS";
+				PRODUCT_NAME = SwiftyCam;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		05D2A9BB1E80BE9700B479E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SwiftyCam-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Cappsule.SwiftyCam-iOS";
+				PRODUCT_NAME = SwiftyCam;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1675A9821E00A68300B80903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1675A9831E00A68300B80903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1675A9851E00A68300B80903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A5C70859E28FD561A890D0E /* Pods-AeroVision.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 95ZGR52Q89;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Walzy.DemoSwiftyCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1675A9861E00A68300B80903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B7CE92C8DD3C7AEE98895A /* Pods-AeroVision.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 95ZGR52Q89;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Walzy.DemoSwiftyCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05D2A9B91E80BE9700B479E9 /* Build configuration list for PBXNativeTarget "SwiftyCam-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D2A9BA1E80BE9700B479E9 /* Debug */,
+				05D2A9BB1E80BE9700B479E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1675A96D1E00A68300B80903 /* Build configuration list for PBXProject "AeroVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1675A9821E00A68300B80903 /* Debug */,
+				1675A9831E00A68300B80903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1675A9841E00A68300B80903 /* Build configuration list for PBXNativeTarget "AeroVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1675A9851E00A68300B80903 /* Debug */,
+				1675A9861E00A68300B80903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1675A96A1E00A68300B80903 /* Project object */;
+}
