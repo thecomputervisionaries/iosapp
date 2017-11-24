@@ -15,6 +15,7 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 
 import UIKit
 import Alamofire
+import DeckTransition
 
 class PhotoViewController: UIViewController {
 
@@ -52,7 +53,18 @@ class PhotoViewController: UIViewController {
         sendButton.setTitle("Send Image to Server", for: .normal)
         sendButton.addTarget(self, action: #selector(send), for: .touchUpInside)
         view.addSubview(sendButton)
-	}
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func viewWasTapped() {
+        let modal = ModalViewController()
+        let transitionDelegate = DeckTransitioningDelegate()
+        modal.transitioningDelegate = transitionDelegate
+        modal.modalPresentationStyle = .custom
+        present(modal, animated: true, completion: nil)
+    }
 
 	func cancel() {
 		dismiss(animated: true, completion: nil)

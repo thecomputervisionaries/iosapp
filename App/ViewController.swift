@@ -30,8 +30,8 @@ class ViewController: SwiftyCamViewController, SwiftyCamViewControllerDelegate {
         shouldUseDeviceOrientation = true
         allowAutoRotate = true
         audioEnabled = true
-	}
-
+    }
+    
 	override var prefersStatusBarHidden: Bool {
 		return true
 	}

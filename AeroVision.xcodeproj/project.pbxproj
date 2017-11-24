@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		05D2A9B81E80BE9700B479E9 /* SwiftyCam-iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 05D2A9B61E80BE9700B479E9 /* SwiftyCam-iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3066F44B1FC7A98A00AA2007 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3066F44A1FC7A98A00AA2007 /* ModalViewController.swift */; };
 		30A22D931F9D866000D77322 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A22D831F9D866000D77322 /* AppDelegate.swift */; };
 		30A22D941F9D866000D77322 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A22D841F9D866000D77322 /* Assets.xcassets */; };
 		30A22D951F9D866000D77322 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A22D851F9D866000D77322 /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 		06B7CE92C8DD3C7AEE98895A /* Pods-AeroVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AeroVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-AeroVision/Pods-AeroVision.release.xcconfig"; sourceTree = "<group>"; };
 		1675A9721E00A68300B80903 /* AeroVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AeroVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B429F94AA12C79532479E0 /* Pods_AeroVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AeroVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3066F44A1FC7A98A00AA2007 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		30A22D831F9D866000D77322 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A22D841F9D866000D77322 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30A22D861F9D866000D77322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				30A22D901F9D866000D77322 /* SwiftyRecordButton.swift */,
 				30A22D911F9D866000D77322 /* VideoViewController.swift */,
 				30A22D921F9D866000D77322 /* ViewController.swift */,
+				3066F44A1FC7A98A00AA2007 /* ModalViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				30A22D9E1F9D866100D77322 /* VideoViewController.swift in Sources */,
 				30A22D991F9D866000D77322 /* PreviewView.swift in Sources */,
 				30A22D9A1F9D866000D77322 /* SwiftyCamButton.swift in Sources */,
+				3066F44B1FC7A98A00AA2007 /* ModalViewController.swift in Sources */,
 				30A22D9F1F9D866100D77322 /* ViewController.swift in Sources */,
 				30A22D931F9D866000D77322 /* AppDelegate.swift in Sources */,
 				30A22D981F9D866000D77322 /* PhotoViewController.swift in Sources */,
@@ -493,9 +497,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 95ZGR52Q89;
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Walzy.DemoSwiftyCam;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.aerovision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -509,9 +513,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 95ZGR52Q89;
 				INFOPLIST_FILE = App/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Walzy.DemoSwiftyCam;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.virginia.aerovision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

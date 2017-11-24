@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.5.1)
+  - DeckTransition (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - DeckTransition (~> 1.0.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  DeckTransition: e58c5b6e4a3c4f2ea1bcb1d3aba1080a9321b995
+
+PODFILE CHECKSUM: 5977cf73ea4e01045069403ac047e07787892b3c
+
+COCOAPODS: 1.1.1
