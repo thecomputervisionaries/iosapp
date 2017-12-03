@@ -106,10 +106,10 @@
 				30A22D851F9D866000D77322 /* LaunchScreen.storyboard */,
 				30A22D871F9D866000D77322 /* Main.storyboard */,
 				30A22DA21F9D869100D77322 /* Info.plist */,
-				30A22D8A1F9D866000D77322 /* PhotoViewController.swift */,
 				30A22D901F9D866000D77322 /* SwiftyRecordButton.swift */,
 				30A22D911F9D866000D77322 /* VideoViewController.swift */,
 				30A22D921F9D866000D77322 /* ViewController.swift */,
+				30A22D8A1F9D866000D77322 /* PhotoViewController.swift */,
 				3066F44A1FC7A98A00AA2007 /* ModalViewController.swift */,
 			);
 			path = App;

@@ -13,6 +13,16 @@ import DeckTransition
 class ModalViewController: UIViewController, UITextViewDelegate {
     
     let textView = UITextView()
+
+    var classificationText = UITextView()
+
+    var imgData = Data()
+
+    var classificationResult = String()
+
+    var imgRepresentation = UIImageView()
+
+    var shadowLayer = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +37,7 @@ class ModalViewController: UIViewController, UITextViewDelegate {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = UIFont.systemFont(ofSize: 40, weight: UIFontWeightHeavy)
         textView.textAlignment = .center
-        textView.text = "presented modal"
-//        "
-//        This is the presented modal view controller.\n
-//        When youʼre scrolled to the very top of the view, you can swipe downwards to dismiss it.\n
-//        The swipe works in one fluid gesture if youʼre scrolling up as well.\n
-//        You can also tap again to present another modal
-//        ""
+        textView.text = "Image Classification"
         
         view.addSubview(textView)
         textView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20).isActive = true
@@ -41,9 +45,47 @@ class ModalViewController: UIViewController, UITextViewDelegate {
         textView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         textView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20).isActive = true
         textView.bounces = false
-        
         textView.delegate = self
         
+        classificationText.isEditable = false
+        classificationText.isSelectable = true
+        classificationText.showsVerticalScrollIndicator = false
+        classificationText.translatesAutoresizingMaskIntoConstraints = false
+        classificationText.font = UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium)
+        classificationText.textAlignment = .center
+        classificationText.text = classificationResult
+        
+        view.addSubview(classificationText)
+        classificationText.topAnchor.constraint(equalTo: view.topAnchor, constant: self.view.frame.height-200).isActive = true
+        classificationText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        classificationText.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        classificationText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        classificationText.bounces = false
+        classificationText.delegate = self
+        
+        imgRepresentation.image = UIImage(data: imgData)
+        imgRepresentation.contentMode = .scaleToFill
+        imgRepresentation.backgroundColor = UIColor.black
+        imgRepresentation.frame.size = CGSize(width: 250, height: 250)
+        imgRepresentation.center = CGPoint(x: view.center.x, y: view.center.y-50)
+        imgRepresentation.layer.cornerRadius = 8
+        imgRepresentation.layer.masksToBounds = true
+
+        view.addSubview(imgRepresentation)
+        
+        shadowLayer.clipsToBounds = true
+        shadowLayer.layer.masksToBounds = false
+        shadowLayer.layer.cornerRadius = 8
+        shadowLayer.backgroundColor = UIColor.white
+        shadowLayer.frame.size = CGSize(width: 250, height: 250)
+        shadowLayer.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        shadowLayer.layer.shadowRadius = 5
+        shadowLayer.layer.shadowOpacity = 0.5
+        shadowLayer.center = CGPoint(x: view.center.x, y: view.center.y-50)
+        view.bringSubview(toFront: shadowLayer)
+        view.addSubview(shadowLayer)
+        view.bringSubview(toFront: imgRepresentation)
+
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
         view.addGestureRecognizer(tap)
     }

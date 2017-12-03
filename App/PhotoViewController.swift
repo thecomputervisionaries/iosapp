@@ -16,12 +16,15 @@ LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 import UIKit
 import Alamofire
 import DeckTransition
+import Foundation
 
 class PhotoViewController: UIViewController {
 
 	override var prefersStatusBarHidden: Bool {
 		return true
 	}
+
+    var modal_ = ModalViewController()
 
 	private var backgroundImage: UIImage
 
@@ -51,48 +54,83 @@ class PhotoViewController: UIViewController {
         sendButton.tintColor = UIColor.white
         sendButton.backgroundColor = UIColor.orange
         sendButton.setTitle("Send Image to Server", for: .normal)
-        sendButton.addTarget(self, action: #selector(send), for: .touchUpInside)
         view.addSubview(sendButton)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewWasTapped))
-        view.addGestureRecognizer(tap)
+        let sendImageToServer = UITapGestureRecognizer(target: self, action: #selector(self.send))
+        sendButton.addGestureRecognizer(sendImageToServer)
     }
     
-    func viewWasTapped() {
-        let modal = ModalViewController()
+    func displayModal() {
         let transitionDelegate = DeckTransitioningDelegate()
-        modal.transitioningDelegate = transitionDelegate
-        modal.modalPresentationStyle = .custom
-        present(modal, animated: true, completion: nil)
+        modal_.transitioningDelegate = transitionDelegate
+        modal_.modalPresentationStyle = .custom
+        modal_.imgData = UIImageJPEGRepresentation(self.backgroundImage, 0.2)!
+        present(modal_, animated: true, completion: {
+            print("displayed modal")
+        })
     }
 
 	func cancel() {
 		dismiss(animated: true, completion: nil)
 	}
-
+    
     func send() {
         let imgData = UIImageJPEGRepresentation(self.backgroundImage, 0.2)!
         
         let rname = "params"
-        let parameters = ["name": rname]
+        // let parameters = ["name": rname]
+
+        let fileSize = Float(imgData.count)
+        NSLog("File size is : %.2f MB", fileSize)
         
         Alamofire.upload(multipartFormData: { multipartFormData in
-            multipartFormData.append(imgData, withName: "fileset",fileName: "file.jpg", mimeType: "image/jpg")
-            for (key, value) in parameters {
-                multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
-            }
-        }, to:"{{awsurl}}/api/upload")
+            multipartFormData.append(imgData, withName: "plane",fileName: "plane.jpg", mimeType: "image/jpg")
+        }, to: BASE_API_URL + ":3000/image/upload", method: HTTPMethod.post, headers: nil)
         { (result) in
+            print(result)
             switch result {
             case .success(let upload, _, _):
                 
+                print("in success")
                 upload.uploadProgress(closure: { (progress) in
                     print("Upload Progress: \(progress.fractionCompleted)")
                 })
                 
                 upload.responseJSON { response in
-                    print(response.result.value)
-                    // dismiss(animated: true, completion: nil)
+                    
+                    switch response.result {
+                        
+                    case .failure(let error):
+                        print(error)
+                        return
+                        
+                    case .success(let data):
+                        
+                        let arrayOfOptionals: [String?] = data as! [String?]
+                        let array:[String] = arrayOfOptionals.map{ $0 ?? "" }
+                        
+                        var str = array[0]
+                        str = str.replacingOccurrences(of: "\'", with: "\"")
+                        let data = str.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+                        
+                        do {
+                            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:AnyObject]
+
+                            let x = json["classification"]
+                            let y = json["probability"]
+                            let z = json["idx"]
+
+                            self.modal_.classificationResult = String(describing: String(describing: "Image classified as: " + (x! as! String)) + String(describing: ", with probability: " + (y! as! String)))
+                            self.displayModal()
+
+                        } catch let error as NSError {
+                            print("Failed to load: \(error.localizedDescription)")
+                        }
+
+                    
+                        print("JSON: \(String(describing: response.result.value))")
+                        
+                    }
                 }
                 
             case .failure(let encodingError):
