@@ -56,7 +56,7 @@ class ModalViewController: UIViewController, UITextViewDelegate {
         classificationText.text = classificationResult
         
         view.addSubview(classificationText)
-        classificationText.topAnchor.constraint(equalTo: view.topAnchor, constant: self.view.frame.height-200).isActive = true
+        classificationText.topAnchor.constraint(equalTo: view.topAnchor, constant: self.view.frame.height-250).isActive = true
         classificationText.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         classificationText.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         classificationText.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true

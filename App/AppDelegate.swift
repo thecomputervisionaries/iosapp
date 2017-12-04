@@ -16,8 +16,8 @@
 
 import UIKit
 
-//let BASE_API_URL = "http://10.217.224.99" // at apt
-let BASE_API_URL = "http://172.25.98.144" // on grounds
+let BASE_API_URL = "http://10.217.224.99" // at apt
+//let BASE_API_URL = "http://172.25.98.144" // on grounds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

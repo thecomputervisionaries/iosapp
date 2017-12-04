@@ -50,9 +50,11 @@ class PhotoViewController: UIViewController {
 		cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
 		view.addSubview(cancelButton)
         
-        let sendButton = UIButton(frame: CGRect(x: self.view.bounds.minX, y: self.view.bounds.maxY-50, width: self.view.bounds.width, height: 50.0))
+        let sendButton = UIButton(frame: CGRect(x: self.view.bounds.minX+10, y: self.view.bounds.maxY-90, width: self.view.bounds.width-20, height: 80.0))
+        sendButton.layer.cornerRadius = 8
+        sendButton.layer.masksToBounds = true
         sendButton.tintColor = UIColor.white
-        sendButton.backgroundColor = UIColor.orange
+        sendButton.backgroundColor = UIColor(red: 0/255, green: 216/255, blue: 232/255, alpha: 1.0) /* #00d8e8 */
         sendButton.setTitle("Send Image to Server", for: .normal)
         view.addSubview(sendButton)
         
@@ -91,7 +93,6 @@ class PhotoViewController: UIViewController {
             switch result {
             case .success(let upload, _, _):
                 
-                print("in success")
                 upload.uploadProgress(closure: { (progress) in
                     print("Upload Progress: \(progress.fractionCompleted)")
                 })
@@ -109,27 +110,40 @@ class PhotoViewController: UIViewController {
                         let arrayOfOptionals: [String?] = data as! [String?]
                         let array:[String] = arrayOfOptionals.map{ $0 ?? "" }
                         
-                        var str = array[0]
-                        str = str.replacingOccurrences(of: "\'", with: "\"")
-                        let data = str.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+                        var str1 = array[0]
+                        var str2 = array[1]
+                        var str3 = array[2]
                         
+                        str1 = str1.replacingOccurrences(of: "\'", with: "\"")
+                        str2 = str2.replacingOccurrences(of: "\'", with: "\"")
+                        str3 = str3.replacingOccurrences(of: "\'", with: "\"")
+                        
+                        let data1 = str1.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+                        let data2 = str2.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+                        let data3 = str3.data(using: String.Encoding.utf8, allowLossyConversion: false)!
+
                         do {
-                            let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String:AnyObject]
+                            let json1 = try JSONSerialization.jsonObject(with: data1, options: .mutableContainers) as! [String:AnyObject]
+                            let json2 = try JSONSerialization.jsonObject(with: data2, options: .mutableContainers) as! [String:AnyObject]
+                            let json3 = try JSONSerialization.jsonObject(with: data3, options: .mutableContainers) as! [String:AnyObject]
 
-                            let x = json["classification"]
-                            let y = json["probability"]
-                            let z = json["idx"]
+                            let mainPred = json1["classification"]
+                            let mainProb = json1["probability"]
+                            
+                            let secondaryPred = json2["classification"]
+                            let secondaryProb = json2["probability"]
+                            
+                            let tertiaryPred = json3["classification"]
+                            let tertiaryProb = json3["probability"]
 
-                            self.modal_.classificationResult = String(describing: String(describing: "Image classified as: " + (x! as! String)) + String(describing: ", with probability: " + (y! as! String)))
+                            self.modal_.classificationResult = String(describing: String(describing: "Image classified as: " + (mainPred! as! String)) + String(describing: ", with probability: " + (mainProb! as! String)) + String(describing: "\n\n Secondary and tertiary predictions are " + (secondaryPred! as! String) + " and " + (tertiaryPred! as! String) + " with prediction probabilities of " + (secondaryProb! as! String) + " and " + (tertiaryProb! as! String) + " respectively"))
                             self.displayModal()
 
                         } catch let error as NSError {
                             print("Failed to load: \(error.localizedDescription)")
                         }
-
-                    
-                        print("JSON: \(String(describing: response.result.value))")
                         
+                        print("JSON: \(String(describing: response.result.value))")
                     }
                 }
                 
